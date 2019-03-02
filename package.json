@@ -1,0 +1,60 @@
+{
+  "name": "openTheWebPage",
+  "displayName": "open the web page",
+  "description": "Viewing  documents directly in vscode, open web pages, and support custom bookmarks!",
+  "keywords": [
+    "open",
+    "web page",
+    "bookmarks",
+    "documents",
+    "docs"
+  ],
+  "qna": "https://github.com/zhhlwd/vscode-open-the-web-page/issues",
+  "bugs": "https://github.com/zhhlwd/vscode-open-the-web-page/issues",
+  "homepage": "https://github.com/zhhlwd/vscode-open-the-web-page",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "zhhlwd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhhlwd/vscode-open-the-web-page"
+  },
+  "galleryBanner": {
+    "color": "#007ACC",
+    "theme": "dark"
+  },
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.31.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.openTheWebPage"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.openTheWebPage",
+        "title": "open the web page"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "open the web page configuration",
+      "properties": {
+        "openTheWebPage": {
+          "type": "object",
+          "default": {},
+          "description": "A custom bookmark for open the web page"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  }
+}
